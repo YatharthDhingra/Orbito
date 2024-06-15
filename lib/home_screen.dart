@@ -29,17 +29,20 @@ class HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Get screen size
+    final Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Align(
+            Align(
                 alignment: Alignment.topCenter,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 100.0),
-                  child: Text(
+                  padding: EdgeInsets.only(left :  screenSize.width * 0.1 , right: screenSize.width * 0.1 , top: screenSize.height * 0.15),
+                  child: const Text(
                     'ORBITO',
                     style: TextStyle(
                         color: Color.fromARGB(255, 231, 45, 123),
@@ -48,10 +51,10 @@ class HomeScreenState extends State<HomeScreen> {
                         fontFamily: 'ARCADE'),
                   ),
                 )),
-            const SizedBox(height: 40), // Space between title and buttons
+            SizedBox(height: screenSize.height * 0.1), // Space between title and buttons
             // Player name input field
             Padding(
-              padding: const EdgeInsets.only(left: 80.0, right: 50.0),
+              padding: EdgeInsets.only(left: screenSize.width * 0.2, right: screenSize.width * 0.1),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -89,7 +92,7 @@ class HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: screenSize.width * 0.05),
                   GestureDetector(
                     onTap: () {
                       setState(() {
@@ -106,12 +109,12 @@ class HomeScreenState extends State<HomeScreen> {
                     child: Icon(
                       isEditing ? Icons.done : Icons.edit,
                       color: const Color.fromARGB(255, 139, 238, 25),
-                    ),  
+                    ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: screenSize.height * 0.1),
             // Single Player button
             ElevatedButton(
               onPressed: () {
@@ -122,7 +125,7 @@ class HomeScreenState extends State<HomeScreen> {
               },
               child: const Text('Single Player'),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: screenSize.height * 0.05),
             // Multiplayer button
             ElevatedButton(
               onPressed: () {
