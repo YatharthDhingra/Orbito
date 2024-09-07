@@ -1,0 +1,33 @@
+16 places to put balls on
+8 and 8 balls (two diff colors)
+Brown board
+Black background
+
+Rules:
+Arrows move the ball clockwise
+In one move, you can place opponent's ball to adjacent arrow {not diagonally} (optional) , you have to place one ball of yours
+Winning: On pressing the button(after) , balls should align either columnwise, rowwise, or diagonally. If opponent's balls are aligining , he/she wins
+On tie: If both players are on winning position , tie , otherwise press the button 5 times, the one who comes in the winning position first wins, otherwise tie.
+
+Single player mode: Probability. (can improve)
+
+
+Home page:
+Username
+Singleplayer button
+Multiplayer button
+
+First give the user a random username
+
+down left left  left
+
+down down  left  up
+
+down  right up   up
+
+right right right up
+
+
+BACKEND:
+
+1. Pair the users - connection between them.
